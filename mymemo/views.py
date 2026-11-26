@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import *
 
 # Create your views here.
 def index(request):
-    return HttpResponse("서디콘 안녕")
+    return render(request, 'main.html')
 
 def create(request):
     content = request.GET['memoContent']
